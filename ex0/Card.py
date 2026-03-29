@@ -17,6 +17,5 @@ class Card(ABC):
     def get_card_info(self) -> Dict:
         pass
 
-    @abstractmethod
     def is_playable(self, available_mana: int) -> bool:
-        pass
+        return available_mana >= self.cost
