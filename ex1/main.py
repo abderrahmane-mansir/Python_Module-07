@@ -5,7 +5,7 @@ from ex0.CreatureCard import CreatureCard
 
 
 def main() -> None:
-    print("\n=== DataDeck Card Foundation - SpellCard Testing ===")
+    print("\n=== DataDeck Deck Builder ===")
     print("\nBuilding deck with different card types...")
     game_status = {
         "player_health": 30,
@@ -27,12 +27,12 @@ def main() -> None:
         effect="Permanent: +1 mana per turn"
     )
     fire_dragon_card = CreatureCard(
-                    name="Fire Dragon",
-                    cost=5,
-                    rarity="Legendary",
-                    attack=7,
-                    health=5
-                    )
+        name="Fire Dragon",
+        cost=5,
+        rarity="Legendary",
+        attack=7,
+        health=5
+    )
     deck = Deck(cards=[
         lightning_bolt_spell,
         mana_crystal_artifact,
