@@ -6,7 +6,7 @@ def main() -> None:
     game_status = {
         "player_health": 30,
         "opponent_health": 30,
-        "player_mana": 2,
+        "player_mana": 6,
         "opponent_mana": 6
     }
     print("\nTesting Abstract Base Class Design:")
