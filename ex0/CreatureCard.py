@@ -39,6 +39,9 @@ class CreatureCard(Card):
         if not isinstance(target, CreatureCard):
             raise ValueError("Target must be a CreatureCard.")
         combat = True if self.attack > target.health else False
+        target.health -= self.attack
+        if target.health <= 0:
+            target.health = 0
         result = {
             "attacker": self.name,
             "target": target.name,
