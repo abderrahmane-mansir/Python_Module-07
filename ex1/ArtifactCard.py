@@ -30,13 +30,11 @@ class ArtifactCard(Card):
         }
         return result
 
-    def get_card_info(self):
-        info = {
-            "name": self.name,
-            "cost": self.cost,
-            "rarity": self.rarity,
+    def get_card_info(self) -> Dict:
+        info = super().get_card_info()
+        info.update({
             "card_type": "Artifact",
             "durability": self.durability,
             "effect": self.effect
-        }
+        })
         return info

@@ -25,14 +25,13 @@ class CreatureCard(Card):
         return result
 
     def get_card_info(self) -> Dict:
-        return {
-            "name": self.name,
-            "cost": self.cost,
-            "rarity": self.rarity,
+        info = super().get_card_info()
+        info.update({
             "type": "Creature",
             "attack": self.attack,
             "health": self.health
-        }
+        })
+        return info
 
     def attack_target(self, target: 'CreatureCard') -> Dict:
         if not isinstance(target, CreatureCard):

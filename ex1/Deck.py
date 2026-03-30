@@ -8,9 +8,8 @@ from math import ceil
 
 
 class Deck:
-    def __init__(self, cards: List[Dict]) -> None:
-        self.cards = cards
-        pass
+    def __init__(self, cards: List[Card]) -> None:
+        self.cards: List[Card] = cards
 
     def add_card(self, card: Card) -> None:
         if not isinstance(card, Card):
