@@ -3,7 +3,6 @@ from typing import Dict
 
 
 class Card(ABC):
-    @abstractmethod
     def __init__(self, name: str, cost: int, rarity: str) -> None:
         self.name = name
         self.cost = cost
